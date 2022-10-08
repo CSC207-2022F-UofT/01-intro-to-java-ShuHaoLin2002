@@ -7,6 +7,10 @@
  * relevant readings for each task.
  */
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
+
 /**
  *  1. In Java, no code can exist outside of a class. Unlike Python which uses
  *    functions, all code in Java uses methods.
@@ -41,6 +45,7 @@ public class Basics {
         System.out.println(7 + 5);
 
         System.out.println("Hello World!");
+
 
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
@@ -102,7 +107,7 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-        for (int a = 10; a > 0; a--) {
+        for (int a = 10; a >= 0; a--) {
             System.out.println("Current count: " + String.valueOf(a));
         }
 
@@ -148,8 +153,8 @@ public class Basics {
          */
 
         StringBuilder ret = new StringBuilder();
-        for (int i = 0; i < 6; i++) {
-            String[] words = to_split.split(" ");
+        String[] words = to_split.split(" ");
+        for (int i = 0; i <= 6; i++) {
             String word = words[i];
             ret.append(word.charAt(0));
         }
@@ -158,6 +163,7 @@ public class Basics {
 
         return ret.toString();
     }
+
 
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
@@ -176,7 +182,7 @@ public class Basics {
     public static int oddSum(int[] arr) {
         int current_sum = 0;
         int length = arr.length;
-        for (int i = 1; i + 2 < length; i += 2) {
+        for (int i = 1; i < length; i += 2) {
             current_sum += arr[i];
         }
 
